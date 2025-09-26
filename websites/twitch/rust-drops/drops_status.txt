@@ -1,0 +1,2225 @@
+Starting Dynamic Twitch Rust Drops Automation...
+[20250926154405] Fetching data from https://twitch.facepunch.com/
+[20250926154405] Successfully fetched HTML content. Length: 58916 characters
+[20250926154405] Parsing HTML content from Facepunch registry...
+[20250926154405] Parsed 0 streamers from registry.
+[20250926154405] Parsing complete: Streamer drops=23, General drops=19, Total=42
+PARSED STREAMERS FROM FACEPUNCH REGISTRY
+============================================================
+
+1. RustCategory2h (general)
+   Item: General Drop (2h)
+   Required: 120 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+2. RustCategory4h (general)
+   Item: General Drop (4h)
+   Required: 240 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+3. RustCategory6h (general)
+   Item: General Drop (6h)
+   Required: 360 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+4. RustCategory8h (general)
+   Item: General Drop (8h)
+   Required: 480 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+5. RustCategory10h (general)
+   Item: General Drop (10h)
+   Required: 600 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+6. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+7. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+8. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+9. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+10. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+11. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+12. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+13. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+14. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+15. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+16. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+17. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+18. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+19. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+20. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+
+21. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+
+22. shroud (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shroud
+
+23. bnans (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/bnans
+
+24. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+
+25. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+
+26. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+
+27. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+
+28. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+
+29. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+
+30. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+
+31. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+
+32. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+
+33. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+
+34. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+
+35. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+
+36. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+
+37. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+
+38. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+
+39. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+
+40. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+
+41. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+
+42. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+
+[20250926154405] Initialized progress tracking: streamer-specific=23, general=6, total=29
+CURRENT PROGRESS SUMMARY
+============================================================
+
+Total streamers: 29
+Complete: 0 ?
+Incomplete: 29
+Total time watched: 0.0 hours
+
+INCOMPLETE STREAMERS:
+  1. Abe - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  2. Emiru - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  3. Foolish - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  4. Masayoshi - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  5. MichiMochievee - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  6. RustCategory10h - General Drop (10h)
+     Progress: 0/600 min (need 600 more)
+  7. RustCategory1h - General Drop (1h)
+     Progress: 0/60 min (need 60 more)
+  8. RustCategory2h - General Drop (2h)
+     Progress: 0/120 min (need 120 more)
+  9. RustCategory4h - General Drop (4h)
+     Progress: 0/240 min (need 240 more)
+  10. RustCategory6h - General Drop (6h)
+     Progress: 0/360 min (need 360 more)
+  11. RustCategory8h - General Drop (8h)
+     Progress: 0/480 min (need 480 more)
+  12. Sykkuno - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  13. TinaKitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  14. Trainwreckstv - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  15. bnans - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  16. cyr - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  17. drops - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  18. ellum - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  19. fuslie - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  20. hJune - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  21. itsRyanHiga - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  22. kkatamina - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  23. login - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  24. peterpark - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  25. shroud - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  26. shxtou - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  27. starsmitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  28. willneff - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  29. xChocoBars - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+
+CHECKING LIVE STATUS FOR STREAMERS
+============================================================
+
+1. RustCategory2h (general)
+   Item: General Drop (2h)
+   Required: 120 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/120 minutes
+
+2. RustCategory4h (general)
+   Item: General Drop (4h)
+   Required: 240 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/240 minutes
+
+3. RustCategory6h (general)
+   Item: General Drop (6h)
+   Required: 360 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/360 minutes
+
+4. RustCategory8h (general)
+   Item: General Drop (8h)
+   Required: 480 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/480 minutes
+
+5. RustCategory10h (general)
+   Item: General Drop (10h)
+   Required: 600 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/600 minutes
+
+6. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+7. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+8. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+9. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+10. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+11. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+12. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+13. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+14. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+15. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+16. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+17. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+18. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+19. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+20. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+   Progress: 0/60 minutes
+
+21. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+   Progress: 0/60 minutes
+
+22. shroud (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shroud
+   Progress: 0/60 minutes
+
+23. bnans (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/bnans
+   Progress: 0/60 minutes
+
+24. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+   Progress: 0/60 minutes
+
+25. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+   Progress: 0/60 minutes
+
+26. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+   Progress: 0/60 minutes
+
+27. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+   Progress: 0/60 minutes
+
+28. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+   Progress: 0/60 minutes
+
+29. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+   Progress: 0/60 minutes
+
+30. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+   Progress: 0/60 minutes
+
+31. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+   Progress: 0/60 minutes
+
+32. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+   Progress: 0/60 minutes
+
+33. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+   Progress: 0/60 minutes
+
+34. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+   Progress: 0/60 minutes
+
+35. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+   Progress: 0/60 minutes
+
+36. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+   Progress: 0/60 minutes
+
+37. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+   Progress: 0/60 minutes
+
+38. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+   Progress: 0/60 minutes
+
+39. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+   Progress: 0/60 minutes
+
+40. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+   Progress: 0/60 minutes
+
+41. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+   Progress: 0/60 minutes
+
+42. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+   Progress: 0/60 minutes
+
+LIVE STATUS CHECK RESULTS
+============================================================
+
+Checked: 42 streamers
+Live: 41 streamers
+Offline: 1 streamers
+
+?? LIVE STREAMERS:
+  1. RustCategory2h - General Drop (2h) (need 120 more min)
+  2. RustCategory4h - General Drop (4h) (need 240 more min)
+  3. RustCategory6h - General Drop (6h) (need 360 more min)
+  4. RustCategory8h - General Drop (8h) (need 480 more min)
+  5. RustCategory10h - General Drop (10h) (need 600 more min)
+  6. RustCategory1h - General Drop (1h) (need 60 more min)
+  7. RustCategory1h - General Drop (1h) (need 60 more min)
+  8. RustCategory1h - General Drop (1h) (need 60 more min)
+  9. RustCategory1h - General Drop (1h) (need 60 more min)
+  10. RustCategory1h - General Drop (1h) (need 60 more min)
+  11. RustCategory1h - General Drop (1h) (need 60 more min)
+  12. RustCategory1h - General Drop (1h) (need 60 more min)
+  13. RustCategory1h - General Drop (1h) (need 60 more min)
+  14. RustCategory1h - General Drop (1h) (need 60 more min)
+  15. RustCategory1h - General Drop (1h) (need 60 more min)
+  16. RustCategory1h - General Drop (1h) (need 60 more min)
+  17. RustCategory1h - General Drop (1h) (need 60 more min)
+  18. RustCategory1h - General Drop (1h) (need 60 more min)
+  19. RustCategory1h - General Drop (1h) (need 60 more min)
+  20. Foolish - Streamer Drop (need 60 more min)
+  21. TinaKitten - Streamer Drop (need 60 more min)
+  22. shroud - Streamer Drop (need 60 more min)
+  23. bnans - Streamer Drop (need 60 more min)
+  24. Abe - Streamer Drop (need 60 more min)
+  25. ellum - Streamer Drop (need 60 more min)
+  26. Masayoshi - Streamer Drop (need 60 more min)
+  27. hJune - Streamer Drop (need 60 more min)
+  28. Sykkuno - Streamer Drop (need 60 more min)
+  29. xChocoBars - Streamer Drop (need 60 more min)
+  30. starsmitten - Streamer Drop (need 60 more min)
+  31. Emiru - Streamer Drop (need 60 more min)
+  32. fuslie - Streamer Drop (need 60 more min)
+  33. peterpark - Streamer Drop (need 60 more min)
+  34. willneff - Streamer Drop (need 60 more min)
+  35. shxtou - Streamer Drop (need 60 more min)
+  36. MichiMochievee - Streamer Drop (need 60 more min)
+  37. Trainwreckstv - Streamer Drop (need 60 more min)
+  38. kkatamina - Streamer Drop (need 60 more min)
+  39. itsRyanHiga - Streamer Drop (need 60 more min)
+  40. cyr - Streamer Drop (need 60 more min)
+  41. drops - Streamer Drop (need 60 more min)
+
+?? OFFLINE STREAMERS:
+  1. login - Streamer Drop (need 60 more min)
+Starting Dynamic Twitch Rust Drops Automation...
+[20250926154558] Fetching data from https://twitch.facepunch.com/
+[20250926154558] Successfully fetched HTML content. Length: 58913 characters
+[20250926154558] Parsing HTML content from Facepunch registry...
+[20250926154558] Parsed 0 streamers from registry.
+[20250926154558] Parsing complete: Streamer drops=23, General drops=19, Total=42
+PARSED STREAMERS FROM FACEPUNCH REGISTRY
+============================================================
+
+1. RustCategory2h (general)
+   Item: General Drop (2h)
+   Required: 120 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+2. RustCategory4h (general)
+   Item: General Drop (4h)
+   Required: 240 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+3. RustCategory6h (general)
+   Item: General Drop (6h)
+   Required: 360 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+4. RustCategory8h (general)
+   Item: General Drop (8h)
+   Required: 480 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+5. RustCategory10h (general)
+   Item: General Drop (10h)
+   Required: 600 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+6. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+7. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+8. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+9. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+10. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+11. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+12. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+13. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+14. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+15. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+16. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+17. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+18. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+19. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+20. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+
+21. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+
+22. shroud (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shroud
+
+23. bnans (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/bnans
+
+24. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+
+25. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+
+26. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+
+27. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+
+28. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+
+29. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+
+30. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+
+31. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+
+32. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+
+33. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+
+34. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+
+35. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+
+36. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+
+37. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+
+38. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+
+39. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+
+40. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+
+41. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+
+42. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+
+[20250926154558] Initialized progress tracking: streamer-specific=23, general=6, total=29
+CURRENT PROGRESS SUMMARY
+============================================================
+
+Total streamers: 29
+Complete: 0 ?
+Incomplete: 29
+Total time watched: 0.0 hours
+
+INCOMPLETE STREAMERS:
+  1. Abe - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  2. Emiru - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  3. Foolish - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  4. Masayoshi - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  5. MichiMochievee - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  6. RustCategory10h - General Drop (10h)
+     Progress: 0/600 min (need 600 more)
+  7. RustCategory1h - General Drop (1h)
+     Progress: 0/60 min (need 60 more)
+  8. RustCategory2h - General Drop (2h)
+     Progress: 0/120 min (need 120 more)
+  9. RustCategory4h - General Drop (4h)
+     Progress: 0/240 min (need 240 more)
+  10. RustCategory6h - General Drop (6h)
+     Progress: 0/360 min (need 360 more)
+  11. RustCategory8h - General Drop (8h)
+     Progress: 0/480 min (need 480 more)
+  12. Sykkuno - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  13. TinaKitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  14. Trainwreckstv - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  15. bnans - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  16. cyr - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  17. drops - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  18. ellum - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  19. fuslie - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  20. hJune - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  21. itsRyanHiga - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  22. kkatamina - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  23. login - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  24. peterpark - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  25. shroud - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  26. shxtou - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  27. starsmitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  28. willneff - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  29. xChocoBars - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+
+CHECKING LIVE STATUS FOR STREAMERS
+============================================================
+
+1. RustCategory2h (general)
+   Item: General Drop (2h)
+   Required: 120 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/120 minutes
+
+2. RustCategory4h (general)
+   Item: General Drop (4h)
+   Required: 240 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/240 minutes
+
+3. RustCategory6h (general)
+   Item: General Drop (6h)
+   Required: 360 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/360 minutes
+
+4. RustCategory8h (general)
+   Item: General Drop (8h)
+   Required: 480 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/480 minutes
+
+5. RustCategory10h (general)
+   Item: General Drop (10h)
+   Required: 600 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/600 minutes
+
+6. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+7. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+8. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+9. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+10. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+11. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+12. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+13. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+14. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+15. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+16. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+17. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+18. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+19. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+20. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+   Progress: 0/60 minutes
+
+21. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+   Progress: 0/60 minutes
+
+22. shroud (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shroud
+   Progress: 0/60 minutes
+
+23. bnans (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/bnans
+   Progress: 0/60 minutes
+
+24. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+   Progress: 0/60 minutes
+
+25. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+   Progress: 0/60 minutes
+
+26. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+   Progress: 0/60 minutes
+
+27. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+   Progress: 0/60 minutes
+
+28. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+   Progress: 0/60 minutes
+
+29. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+   Progress: 0/60 minutes
+
+30. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+   Progress: 0/60 minutes
+
+31. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+   Progress: 0/60 minutes
+
+32. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+   Progress: 0/60 minutes
+
+33. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+   Progress: 0/60 minutes
+
+34. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+   Progress: 0/60 minutes
+
+35. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+   Progress: 0/60 minutes
+
+36. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+   Progress: 0/60 minutes
+
+37. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+   Progress: 0/60 minutes
+
+38. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+   Progress: 0/60 minutes
+
+39. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+   Progress: 0/60 minutes
+
+40. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+   Progress: 0/60 minutes
+
+41. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+   Progress: 0/60 minutes
+
+42. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+   Progress: 0/60 minutes
+
+LIVE STATUS CHECK RESULTS
+============================================================
+
+Checked: 42 streamers
+Live: 41 streamers
+Offline: 1 streamers
+
+?? LIVE STREAMERS:
+  1. RustCategory2h - General Drop (2h) (need 120 more min)
+  2. RustCategory4h - General Drop (4h) (need 240 more min)
+  3. RustCategory6h - General Drop (6h) (need 360 more min)
+  4. RustCategory8h - General Drop (8h) (need 480 more min)
+  5. RustCategory10h - General Drop (10h) (need 600 more min)
+  6. RustCategory1h - General Drop (1h) (need 60 more min)
+  7. RustCategory1h - General Drop (1h) (need 60 more min)
+  8. RustCategory1h - General Drop (1h) (need 60 more min)
+  9. RustCategory1h - General Drop (1h) (need 60 more min)
+  10. RustCategory1h - General Drop (1h) (need 60 more min)
+  11. RustCategory1h - General Drop (1h) (need 60 more min)
+  12. RustCategory1h - General Drop (1h) (need 60 more min)
+  13. RustCategory1h - General Drop (1h) (need 60 more min)
+  14. RustCategory1h - General Drop (1h) (need 60 more min)
+  15. RustCategory1h - General Drop (1h) (need 60 more min)
+  16. RustCategory1h - General Drop (1h) (need 60 more min)
+  17. RustCategory1h - General Drop (1h) (need 60 more min)
+  18. RustCategory1h - General Drop (1h) (need 60 more min)
+  19. RustCategory1h - General Drop (1h) (need 60 more min)
+  20. Foolish - Streamer Drop (need 60 more min)
+  21. TinaKitten - Streamer Drop (need 60 more min)
+  22. shroud - Streamer Drop (need 60 more min)
+  23. bnans - Streamer Drop (need 60 more min)
+  24. Abe - Streamer Drop (need 60 more min)
+  25. ellum - Streamer Drop (need 60 more min)
+  26. Masayoshi - Streamer Drop (need 60 more min)
+  27. hJune - Streamer Drop (need 60 more min)
+  28. Sykkuno - Streamer Drop (need 60 more min)
+  29. xChocoBars - Streamer Drop (need 60 more min)
+  30. starsmitten - Streamer Drop (need 60 more min)
+  31. Emiru - Streamer Drop (need 60 more min)
+  32. fuslie - Streamer Drop (need 60 more min)
+  33. peterpark - Streamer Drop (need 60 more min)
+  34. willneff - Streamer Drop (need 60 more min)
+  35. shxtou - Streamer Drop (need 60 more min)
+  36. MichiMochievee - Streamer Drop (need 60 more min)
+  37. Trainwreckstv - Streamer Drop (need 60 more min)
+  38. kkatamina - Streamer Drop (need 60 more min)
+  39. itsRyanHiga - Streamer Drop (need 60 more min)
+  40. cyr - Streamer Drop (need 60 more min)
+  41. drops - Streamer Drop (need 60 more min)
+
+?? OFFLINE STREAMERS:
+  1. login - Streamer Drop (need 60 more min)
+[20250926155114] Starting Dynamic Twitch Rust Drops Automation...
+[20250926155114] Fetching data from https://twitch.facepunch.com/
+[20250926155115] Successfully fetched HTML content. Length: 58922 characters
+[20250926155115] Parsing HTML content from Facepunch registry...
+[20250926155115] Parsed 0 streamers from registry.
+[20250926155115] Parsing complete: Streamer drops=23, General drops=19, Total=42
+PARSED STREAMERS FROM FACEPUNCH REGISTRY
+============================================================
+
+1. RustCategory2h (general)
+   Item: General Drop (2h)
+   Required: 120 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+2. RustCategory4h (general)
+   Item: General Drop (4h)
+   Required: 240 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+3. RustCategory6h (general)
+   Item: General Drop (6h)
+   Required: 360 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+4. RustCategory8h (general)
+   Item: General Drop (8h)
+   Required: 480 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+5. RustCategory10h (general)
+   Item: General Drop (10h)
+   Required: 600 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+6. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+7. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+8. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+9. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+10. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+11. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+12. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+13. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+14. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+15. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+16. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+17. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+18. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+19. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+
+20. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+
+21. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+
+22. shroud (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shroud
+
+23. bnans (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/bnans
+
+24. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+
+25. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+
+26. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+
+27. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+
+28. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+
+29. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+
+30. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+
+31. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+
+32. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+
+33. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+
+34. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+
+35. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+
+36. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+
+37. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+
+38. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+
+39. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+
+40. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+
+41. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+
+42. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+
+[20250926155115] Initialized progress tracking: streamer-specific=23, general=6, total=29
+CURRENT PROGRESS SUMMARY
+============================================================
+
+Total streamers: 29
+Complete: 0 ?
+Incomplete: 29
+Total time watched: 0.0 hours
+
+INCOMPLETE STREAMERS:
+  1. Abe - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  2. Emiru - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  3. Foolish - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  4. Masayoshi - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  5. MichiMochievee - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  6. RustCategory10h - General Drop (10h)
+     Progress: 0/600 min (need 600 more)
+  7. RustCategory1h - General Drop (1h)
+     Progress: 0/60 min (need 60 more)
+  8. RustCategory2h - General Drop (2h)
+     Progress: 0/120 min (need 120 more)
+  9. RustCategory4h - General Drop (4h)
+     Progress: 0/240 min (need 240 more)
+  10. RustCategory6h - General Drop (6h)
+     Progress: 0/360 min (need 360 more)
+  11. RustCategory8h - General Drop (8h)
+     Progress: 0/480 min (need 480 more)
+  12. Sykkuno - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  13. TinaKitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  14. Trainwreckstv - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  15. bnans - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  16. cyr - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  17. drops - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  18. ellum - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  19. fuslie - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  20. hJune - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  21. itsRyanHiga - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  22. kkatamina - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  23. login - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  24. peterpark - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  25. shroud - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  26. shxtou - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  27. starsmitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  28. willneff - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  29. xChocoBars - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+
+CHECKING LIVE STATUS FOR STREAMERS
+============================================================
+
+1. RustCategory2h (general)
+   Item: General Drop (2h)
+   Required: 120 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/120 minutes
+
+2. RustCategory4h (general)
+   Item: General Drop (4h)
+   Required: 240 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/240 minutes
+
+3. RustCategory6h (general)
+   Item: General Drop (6h)
+   Required: 360 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/360 minutes
+
+4. RustCategory8h (general)
+   Item: General Drop (8h)
+   Required: 480 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/480 minutes
+
+5. RustCategory10h (general)
+   Item: General Drop (10h)
+   Required: 600 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/600 minutes
+
+6. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+7. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+8. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+9. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+10. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+11. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+12. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+13. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+14. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+15. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+16. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+17. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+18. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+19. RustCategory1h (general)
+   Item: General Drop (1h)
+   Required: 60 minutes
+   URL: https://www.twitch.tv/directory/category/rust
+   Progress: 0/60 minutes
+
+20. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+   Progress: 0/60 minutes
+
+21. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+   Progress: 0/60 minutes
+
+22. shroud (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shroud
+   Progress: 0/60 minutes
+
+23. bnans (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/bnans
+   Progress: 0/60 minutes
+
+24. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+   Progress: 0/60 minutes
+
+25. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+   Progress: 0/60 minutes
+
+26. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+   Progress: 0/60 minutes
+
+27. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+   Progress: 0/60 minutes
+
+28. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+   Progress: 0/60 minutes
+
+29. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+   Progress: 0/60 minutes
+
+30. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+   Progress: 0/60 minutes
+
+31. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+   Progress: 0/60 minutes
+
+32. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+   Progress: 0/60 minutes
+
+33. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+   Progress: 0/60 minutes
+
+34. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+   Progress: 0/60 minutes
+
+35. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+   Progress: 0/60 minutes
+
+36. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+   Progress: 0/60 minutes
+
+37. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+   Progress: 0/60 minutes
+
+38. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+   Progress: 0/60 minutes
+
+39. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+   Progress: 0/60 minutes
+
+40. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+   Progress: 0/60 minutes
+
+41. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+   Progress: 0/60 minutes
+
+42. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+   Progress: 0/60 minutes
+
+LIVE STATUS CHECK RESULTS
+============================================================
+
+Checked: 42 streamers
+Live: 41 streamers
+Offline: 1 streamers
+
+?? LIVE STREAMERS:
+  1. RustCategory2h - General Drop (2h) (need 120 more min)
+  2. RustCategory4h - General Drop (4h) (need 240 more min)
+  3. RustCategory6h - General Drop (6h) (need 360 more min)
+  4. RustCategory8h - General Drop (8h) (need 480 more min)
+  5. RustCategory10h - General Drop (10h) (need 600 more min)
+  6. RustCategory1h - General Drop (1h) (need 60 more min)
+  7. RustCategory1h - General Drop (1h) (need 60 more min)
+  8. RustCategory1h - General Drop (1h) (need 60 more min)
+  9. RustCategory1h - General Drop (1h) (need 60 more min)
+  10. RustCategory1h - General Drop (1h) (need 60 more min)
+  11. RustCategory1h - General Drop (1h) (need 60 more min)
+  12. RustCategory1h - General Drop (1h) (need 60 more min)
+  13. RustCategory1h - General Drop (1h) (need 60 more min)
+  14. RustCategory1h - General Drop (1h) (need 60 more min)
+  15. RustCategory1h - General Drop (1h) (need 60 more min)
+  16. RustCategory1h - General Drop (1h) (need 60 more min)
+  17. RustCategory1h - General Drop (1h) (need 60 more min)
+  18. RustCategory1h - General Drop (1h) (need 60 more min)
+  19. RustCategory1h - General Drop (1h) (need 60 more min)
+  20. Foolish - Streamer Drop (need 60 more min)
+  21. TinaKitten - Streamer Drop (need 60 more min)
+  22. shroud - Streamer Drop (need 60 more min)
+  23. bnans - Streamer Drop (need 60 more min)
+  24. Abe - Streamer Drop (need 60 more min)
+  25. ellum - Streamer Drop (need 60 more min)
+  26. Masayoshi - Streamer Drop (need 60 more min)
+  27. hJune - Streamer Drop (need 60 more min)
+  28. Sykkuno - Streamer Drop (need 60 more min)
+  29. xChocoBars - Streamer Drop (need 60 more min)
+  30. starsmitten - Streamer Drop (need 60 more min)
+  31. Emiru - Streamer Drop (need 60 more min)
+  32. fuslie - Streamer Drop (need 60 more min)
+  33. peterpark - Streamer Drop (need 60 more min)
+  34. willneff - Streamer Drop (need 60 more min)
+  35. shxtou - Streamer Drop (need 60 more min)
+  36. MichiMochievee - Streamer Drop (need 60 more min)
+  37. Trainwreckstv - Streamer Drop (need 60 more min)
+  38. kkatamina - Streamer Drop (need 60 more min)
+  39. itsRyanHiga - Streamer Drop (need 60 more min)
+  40. cyr - Streamer Drop (need 60 more min)
+  41. drops - Streamer Drop (need 60 more min)
+
+?? OFFLINE STREAMERS:
+  1. login - Streamer Drop (need 60 more min)
+Selected streamer: RustCategory2h - General Drop (2h) (need 120 min)\n[20250926155222] Starting 60 minute session for RustCategory2h
+Started session for RustCategory2h (10 min)
+[20250926155222] Time remaining this session: 10.0 minutes
+[20250926155909] Starting Dynamic Twitch Rust Drops Automation...
+[20250926155909] Fetching data from https://twitch.facepunch.com/
+[20250926155910] Successfully fetched HTML content. Length: 58913 characters
+[20250926155910] Parsing HTML content from Facepunch registry...
+[20250926155910] Parsed 0 streamers from registry.
+[20250926155910] Parsing complete: Streamer drops=23, General drops=19, Total=42
+PARSED STREAMERS FROM FACEPUNCH REGISTRY
+============================================================
+
+1. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+
+2. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+
+3. shroud (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shroud
+
+4. bnans (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/bnans
+
+5. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+
+6. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+
+7. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+
+8. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+
+9. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+
+10. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+
+11. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+
+12. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+
+13. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+
+14. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+
+15. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+
+16. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+
+17. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+
+18. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+
+19. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+
+20. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+
+21. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+
+22. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+
+23. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+
+GENERAL DROPS (work on any Rust stream)
+============================================================
+
+1. General Drop (2h)
+   Required: 2 hours (120 minutes)
+   Works on: Any Rust category stream
+
+2. General Drop (4h)
+   Required: 4 hours (240 minutes)
+   Works on: Any Rust category stream
+
+3. General Drop (6h)
+   Required: 6 hours (360 minutes)
+   Works on: Any Rust category stream
+
+4. General Drop (8h)
+   Required: 8 hours (480 minutes)
+   Works on: Any Rust category stream
+
+5. General Drop (10h)
+   Required: 10 hours (600 minutes)
+   Works on: Any Rust category stream
+
+6. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+7. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+8. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+9. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+10. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+11. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+12. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+13. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+14. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+15. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+16. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+17. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+18. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+19. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+[20250926155910] Initialized progress tracking: streamer-specific=23, general=19, total streamers tracked=23
+CURRENT PROGRESS SUMMARY
+============================================================
+
+Total streamers: 23
+Complete: 0 ?
+Incomplete: 23
+Total time watched: 0.0 hours
+
+INCOMPLETE STREAMERS:
+  1. Abe - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  2. Emiru - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  3. Foolish - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  4. Masayoshi - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  5. MichiMochievee - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  6. Sykkuno - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  7. TinaKitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  8. Trainwreckstv - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  9. bnans - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  10. cyr - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  11. drops - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  12. ellum - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  13. fuslie - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  14. hJune - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  15. itsRyanHiga - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  16. kkatamina - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  17. login - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  18. peterpark - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  19. shroud - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  20. shxtou - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  21. starsmitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  22. willneff - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  23. xChocoBars - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+
+CHECKING LIVE STATUS FOR STREAMERS
+============================================================
+
+1. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+   Progress: 0/60 minutes
+
+2. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+   Progress: 0/60 minutes
+
+3. shroud (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shroud
+   Progress: 0/60 minutes
+
+4. bnans (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/bnans
+   Progress: 0/60 minutes
+
+5. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+   Progress: 0/60 minutes
+
+6. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+   Progress: 0/60 minutes
+
+7. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+   Progress: 0/60 minutes
+
+8. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+   Progress: 0/60 minutes
+
+9. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+   Progress: 0/60 minutes
+
+10. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+   Progress: 0/60 minutes
+
+11. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+   Progress: 0/60 minutes
+
+12. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+   Progress: 0/60 minutes
+
+13. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+   Progress: 0/60 minutes
+
+14. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+   Progress: 0/60 minutes
+
+15. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+   Progress: 0/60 minutes
+
+16. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+   Progress: 0/60 minutes
+
+17. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+   Progress: 0/60 minutes
+
+18. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+   Progress: 0/60 minutes
+
+19. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+   Progress: 0/60 minutes
+
+20. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+   Progress: 0/60 minutes
+
+21. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+   Progress: 0/60 minutes
+
+22. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+   Progress: 0/60 minutes
+
+23. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+   Progress: 0/60 minutes
+
+LIVE STATUS CHECK RESULTS
+============================================================
+
+Checked: 23 streamers
+Live: 22 streamers
+Offline: 1 streamers
+
+?? LIVE STREAMERS:
+  1. Foolish - Streamer Drop (need 60 more min)
+  2. TinaKitten - Streamer Drop (need 60 more min)
+  3. shroud - Streamer Drop (need 60 more min)
+  4. bnans - Streamer Drop (need 60 more min)
+  5. Abe - Streamer Drop (need 60 more min)
+  6. ellum - Streamer Drop (need 60 more min)
+  7. Masayoshi - Streamer Drop (need 60 more min)
+  8. hJune - Streamer Drop (need 60 more min)
+  9. Sykkuno - Streamer Drop (need 60 more min)
+  10. xChocoBars - Streamer Drop (need 60 more min)
+  11. starsmitten - Streamer Drop (need 60 more min)
+  12. Emiru - Streamer Drop (need 60 more min)
+  13. fuslie - Streamer Drop (need 60 more min)
+  14. peterpark - Streamer Drop (need 60 more min)
+  15. willneff - Streamer Drop (need 60 more min)
+  16. shxtou - Streamer Drop (need 60 more min)
+  17. MichiMochievee - Streamer Drop (need 60 more min)
+  18. Trainwreckstv - Streamer Drop (need 60 more min)
+  19. kkatamina - Streamer Drop (need 60 more min)
+  20. itsRyanHiga - Streamer Drop (need 60 more min)
+  21. cyr - Streamer Drop (need 60 more min)
+  22. drops - Streamer Drop (need 60 more min)
+
+?? OFFLINE STREAMERS:
+  1. login - Streamer Drop (need 60 more min)
+Selected streamer: Foolish - Streamer Drop (need 60 min)\n[20250926155946] Starting 60 minute session for Foolish
+Started session for Foolish (10 min)
+[20250926155946] Time remaining this session: 10.0 minutes

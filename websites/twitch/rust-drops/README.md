@@ -1,0 +1,1 @@
+this script should look at twitch.facepunch.com and watch needed streams to unlock all loot drops. 
