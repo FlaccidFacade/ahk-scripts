@@ -15,9 +15,41 @@ IsUserLive(twitchUrl) {
         http.Open("GET", twitchUrl)
         http.Send()
 
-        ; Check if the response contains "isLive" or similar indicator
+        ; Check if the response contains live indicators
         response := http.ResponseText
-        return InStr(response, "isLive") || InStr(response, "live_status")
+        
+        ; More specific checks for live status
+        ; Look for specific patterns that indicate a live stream
+        isLivePattern1 := InStr(response, '"isLiveBroadcast":true')
+        isLivePattern2 := InStr(response, '"broadcastType":"live"')
+        isLivePattern3 := InStr(response, 'data-a-target="player-overlay-play-button"')
+        isLivePattern4 := InStr(response, '"stream":{"id"')
+        
+        ; Check for offline indicators (if these exist, definitely not live)
+        isOfflinePattern1 := InStr(response, "offline_screen")
+        isOfflinePattern2 := InStr(response, "channel-info-content")
+        isOfflinePattern3 := InStr(response, '"stream":null')
+        
+        ; Debug logging to track what patterns are found
+        if (DEBUG_MODE) {
+            patterns := "Live patterns: " . isLivePattern1 . "," . isLivePattern2 . "," . isLivePattern3 . "," . isLivePattern4
+            patterns .= " | Offline patterns: " . isOfflinePattern1 . "," . isOfflinePattern2 . "," . isOfflinePattern3
+            FileAppend("DEBUG: " . twitchUrl . " - " . patterns . "`n", A_ScriptDir "/drops_status.txt")
+        }
+        
+        ; If we find offline indicators, definitely not live
+        if (isOfflinePattern1 || isOfflinePattern2 || isOfflinePattern3) {
+            return false
+        }
+        
+        ; If we find live indicators, likely live
+        if (isLivePattern1 || isLivePattern2 || isLivePattern3 || isLivePattern4) {
+            return true
+        }
+        
+        ; Default to false if uncertain
+        return false
+        
     } catch Error as e {
         if (DEBUG_MODE) {
             Notify("Failed to query the Twitch URL: " . twitchUrl . ". Error: " . e.Message, 6)
