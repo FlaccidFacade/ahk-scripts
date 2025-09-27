@@ -249,8 +249,17 @@ SessionStartTime := 0
 ; Global running flag - set to false to stop automation
 Running := true
 
+; Global flag to force skip current streamer - set to true to skip
+SkipCurrentStreamer := false
+
 ; Hotkey to immediately stop automation and clean up: Ctrl+Alt+Q
 ^!q::ExitAutomation()
+
+; Hotkey to force stop/skip current streamer: Ctrl+Alt+S
+^!s::ForceStopCurrentStreamer()
+
+; Hotkey to show/hide progress window: Ctrl+Alt+P
+^!p::ToggleProgressWindow()
 
 ; Graceful shutdown: stops automation and closes Chrome
 ExitAutomation() {
@@ -267,6 +276,201 @@ ExitAutomation() {
     FileAppend("Automation stopped by user (Ctrl+Alt+Q).`n", A_ScriptDir "\\drops_status.txt")
     TrayTip("Twitch Drops", "Automation stopped by user (Ctrl+Alt+Q)", 5)
     ExitApp
+}
+
+; Force stop/skip current streamer: moves to next available streamer
+ForceStopCurrentStreamer() {
+    SkipCurrentStreamer := true
+    ; Log the action
+    if (CurrentStreamer != "") {
+        logMessage := "Force stopped current streamer: " . CurrentStreamer . " (Ctrl+Alt+S)"
+        FileAppend(logMessage . "`n", A_ScriptDir "\\drops_status.txt")
+        TrayTip("Twitch Drops", "Skipping " . CurrentStreamer . "...", 3)
+        Notify("Force stopping " . CurrentStreamer . " and moving to next available streamer...", 5, true)
+    } else {
+        TrayTip("Twitch Drops", "No active streamer to skip", 3)
+    }
+}
+
+; Global variable to track progress window state
+ProgressWindowVisible := false
+
+; Toggle progress window visibility
+ToggleProgressWindow() {
+    ProgressWindowVisible := !ProgressWindowVisible
+    if (ProgressWindowVisible) {
+        ShowProgressWindow()
+    } else {
+        HideProgressWindow()
+    }
+}
+
+; Enhanced progress window showing detailed real-time progress
+ShowProgressWindow() {
+    static progressGui := ""
+    static progressText := ""
+    
+    if (progressGui == "") {
+        ; Create the GUI window
+        progressGui := Gui("+Resize +MaximizeBox +MinimizeBox", "Twitch Drops - Real-Time Progress")
+        progressGui.SetFont("s10", "Consolas")
+        progressText := progressGui.Add("Edit", "x10 y10 w800 h500 ReadOnly VScroll", "")
+        
+        ; Add refresh button
+        refreshBtn := progressGui.Add("Button", "x10 y520 w100 h30", "&Refresh")
+        refreshBtn.OnEvent("Click", RefreshProgress)
+        
+        ; Add close button
+        closeBtn := progressGui.Add("Button", "x120 y520 w100 h30", "&Close")
+        closeBtn.OnEvent("Click", (*) => HideProgressWindow())
+        
+        progressGui.OnEvent("Close", (*) => HideProgressWindow())
+    }
+    
+    ; Update content and show
+    RefreshProgressContent()
+    progressGui.Show("w820 h560")
+    ProgressWindowVisible := true
+}
+
+; Hide progress window
+HideProgressWindow() {
+    static progressGui := ""
+    if (progressGui != "") {
+        progressGui.Hide()
+    }
+    ProgressWindowVisible := false
+}
+
+; Refresh progress content
+RefreshProgress(*) {
+    RefreshProgressContent()
+}
+
+; Update progress window content
+RefreshProgressContent() {
+    static progressGui := ""
+    static progressText := ""
+    
+    if (progressGui == "" || !ProgressWindowVisible) {
+        return
+    }
+    
+    content := BuildProgressContent()
+    progressText.Text := content
+    
+    ; Auto-scroll to show current activity
+    progressText.Focus()
+    Send("^{Home}")  ; Go to top for better view
+}
+
+
+; Build comprehensive progress content for the progress window
+BuildProgressContent() {
+    currentTime := A_Now
+    content := "TWITCH DROPS AUTOMATION - REAL-TIME PROGRESS`n"
+    content .= RepeatString("=", 80) . "`n`n"
+    content .= "Last Updated: " . FormatTime(currentTime, "yyyy-MM-dd HH:mm:ss") . "`n`n"
+    
+    ; Current status section
+    content .= "CURRENT STATUS`n" . RepeatString("-", 40) . "`n"
+    if (CurrentStreamer != "") {
+        sessionTime := Round((A_TickCount - SessionStartTime) / 60000, 1)
+        progress := StreamerProgress[CurrentStreamer]
+        content .= "🔴 Currently Watching: " . CurrentStreamer . "`n"
+        content .= "   Item: " . progress.itemName . "`n"
+        content .= "   Session Time: " . sessionTime . " minutes`n"
+        content .= "   Total Progress: " . progress.timeWatched . "/" . progress.requiredMinutes . " minutes`n"
+        remaining := progress.requiredMinutes - progress.timeWatched
+        content .= "   Remaining: " . remaining . " minutes`n"
+        if (progress.isComplete) {
+            content .= "   Status: ✅ COMPLETED`n"
+        } else {
+            percentage := Round((progress.timeWatched / progress.requiredMinutes) * 100, 1)
+            content .= "   Status: 🔄 In Progress (" . percentage . "%)`n"
+        }
+    } else {
+        content .= "⏸️ No streamer currently active`n"
+    }
+    content .= "`n"
+    
+    ; Overall progress summary
+    completeCount := 0
+    incompleteCount := 0
+    totalTimeWatched := 0
+    
+    for username, progress in StreamerProgress {
+        totalTimeWatched += progress.timeWatched
+        if (progress.isComplete) {
+            completeCount++
+        } else {
+            incompleteCount++
+        }
+    }
+    
+    content .= "OVERALL PROGRESS SUMMARY`n" . RepeatString("-", 40) . "`n"
+    content .= "Total Streamers: " . StreamerProgress.Count . "`n"
+    content .= "✅ Completed: " . completeCount . "`n"
+    content .= "🔄 In Progress: " . incompleteCount . "`n"
+    content .= "⏱️ Total Time Watched: " . Round(totalTimeWatched / 60, 1) . " hours`n`n"
+    
+    ; Completed streamers
+    if (completeCount > 0) {
+        content .= "✅ COMPLETED STREAMERS`n" . RepeatString("-", 40) . "`n"
+        count := 1
+        for username, progress in StreamerProgress {
+            if (progress.isComplete) {
+                content .= count . ". " . username . " - " . progress.itemName . " (✓ " . progress.timeWatched . " min)`n"
+                count++
+            }
+        }
+        content .= "`n"
+    }
+    
+    ; Incomplete streamers
+    if (incompleteCount > 0) {
+        content .= "🔄 STREAMERS IN PROGRESS`n" . RepeatString("-", 40) . "`n"
+        count := 1
+        for username, progress in StreamerProgress {
+            if (!progress.isComplete) {
+                remaining := progress.requiredMinutes - progress.timeWatched
+                percentage := Round((progress.timeWatched / progress.requiredMinutes) * 100, 1)
+                status := (username == CurrentStreamer) ? " 🔴 ACTIVE" : ""
+                content .= count . ". " . username . " - " . progress.itemName . status . "`n"
+                content .= "    Progress: " . progress.timeWatched . "/" . progress.requiredMinutes . " min (" . percentage . "%) - Need " . remaining . " more`n"
+                count++
+            }
+        }
+        content .= "`n"
+    }
+    
+    ; Controls information
+    content .= "🎮 KEYBOARD CONTROLS`n" . RepeatString("-", 40) . "`n"
+    content .= "Ctrl+Alt+P: Toggle this progress window`n"
+    content .= "Ctrl+Alt+S: Force stop/skip current streamer`n"
+    content .= "Ctrl+Alt+Q: Stop automation completely`n`n"
+    
+    ; Recent activity (last few lines from drops_status.txt)
+    content .= "📋 RECENT ACTIVITY`n" . RepeatString("-", 40) . "`n"
+    try {
+        if (FileExist(A_ScriptDir "\\drops_status.txt")) {
+            fullLog := FileRead(A_ScriptDir "\\drops_status.txt")
+            lines := StrSplit(fullLog, "`n")
+            recentLines := Min(10, lines.Length)  ; Show last 10 lines
+            startIndex := Max(1, lines.Length - recentLines + 1)
+            
+            Loop recentLines {
+                lineIndex := startIndex + A_Index - 1
+                if (lineIndex <= lines.Length && Trim(lines[lineIndex]) != "") {
+                    content .= lines[lineIndex] . "`n"
+                }
+            }
+        }
+    } catch {
+        content .= "Unable to read recent activity log.`n"
+    }
+    
+    return content
 }
 
 
@@ -625,6 +829,16 @@ WatchWithPeriodicChecks(streamer, maxMinutes) {
     checkIntervalMinutes := 10
     
     Loop {
+        ; Check if user requested to skip current streamer
+        if (SkipCurrentStreamer) {
+            if (DEBUG_MODE) {
+                FileAppend("User requested to skip " . streamer.username . " after " . totalWatchedThisSession . " minutes. Moving to next streamer.`n", A_ScriptDir "\\drops_status.txt")
+                TrayTip("Twitch Drops", "Skipped " . streamer.username . " - moving to next", 5)
+            }
+            SkipCurrentStreamer := false  ; Reset flag
+            break
+        }
+        
         ; Calculate remaining time for this check period
         if (!Running) {
             break
@@ -652,9 +866,24 @@ WatchWithPeriodicChecks(streamer, maxMinutes) {
             break
         }
         
+        ; Check again if user requested to skip (might have been set during WaitForDuration)
+        if (SkipCurrentStreamer) {
+            if (DEBUG_MODE) {
+                FileAppend("User requested to skip " . streamer.username . " after " . totalWatchedThisSession . " minutes. Moving to next streamer.`n", A_ScriptDir "\\drops_status.txt")
+                TrayTip("Twitch Drops", "Skipped " . streamer.username . " - moving to next", 5)
+            }
+            SkipCurrentStreamer := false  ; Reset flag
+            break
+        }
+        
         ; Update progress
         totalWatchedThisSession += watchTime
         StreamerProgress[streamer.username].timeWatched += watchTime
+        
+        ; Update progress window if visible
+        if (ProgressWindowVisible) {
+            RefreshProgressContent()
+        }
         
         ; Check if streamer completed their requirement
         if (StreamerProgress[streamer.username].timeWatched >= streamer.minutes) {
@@ -725,7 +954,7 @@ WaitForDuration(minutes) {
     
     ; Update every minute
     Loop {
-        if (!Running) {
+        if (!Running || SkipCurrentStreamer) {
             return false
         }
         if (remainingSeconds <= 0) {
@@ -749,6 +978,11 @@ WaitForDuration(minutes) {
                 progressText .= "`nTotal watched for " . CurrentStreamer . ": " . totalWatched . " minutes"
             }
             Notify(progressText, 5)
+            
+            ; Update progress window if visible
+            if (ProgressWindowVisible) {
+                RefreshProgressContent()
+            }
         }
         
         Sleep 60000  ; Wait 1 minute
