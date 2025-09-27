@@ -360,8 +360,8 @@ RefreshProgressContent() {
     progressText.Text := content
     
     ; Auto-scroll to show current activity
-    progressText.Focus()
-    Send("^{Home}")  ; Go to top for better view
+    ; Scroll to top of the Edit control (progressText)
+    SendMessage(0x00B1, 0, 0, progressText)  ; EM_SETSEL: set selection to start, scrolls to top
 }
 
 
