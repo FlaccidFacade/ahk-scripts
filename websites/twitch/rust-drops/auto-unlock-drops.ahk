@@ -296,14 +296,8 @@ SkipCurrentStreamer := false
 ; Graceful shutdown: stops automation and closes Chrome
 ExitAutomation() {
     Running := false
-    ; Close Chrome windows
-    try {
-        for window in WinGetList("ahk_class Chrome_WidgetWin_1") {
-            WinClose(window)
-        }
-    } catch {
-        ; ignore
-    }
+    ; Close Chrome windows (using the safer CloseAllChrome function)
+    CloseAllChrome()
     ; Log and notify without blocking
     FileAppend("Automation stopped by user (Ctrl+Alt+Q).`n", A_ScriptDir "\\drops_status.txt")
     TrayTip("Twitch Drops", "Automation stopped by user (Ctrl+Alt+Q)", 5)
@@ -312,6 +306,7 @@ ExitAutomation() {
 
 ; Force stop/skip current streamer: moves to next available streamer
 ForceStopCurrentStreamer() {
+    global SkipCurrentStreamer, CurrentStreamer
     SkipCurrentStreamer := true
     ; Log the action
     if (CurrentStreamer != "") {
@@ -329,6 +324,7 @@ ProgressWindowVisible := false
 
 ; Toggle progress window visibility
 ToggleProgressWindow() {
+    global ProgressWindowVisible
     ProgressWindowVisible := !ProgressWindowVisible
     if (ProgressWindowVisible) {
         ShowProgressWindow()
@@ -339,6 +335,7 @@ ToggleProgressWindow() {
 
 ; Enhanced progress window showing detailed real-time progress
 ShowProgressWindow() {
+    global ProgressWindowVisible
     static progressGui := ""
     static progressText := ""
     
@@ -367,6 +364,7 @@ ShowProgressWindow() {
 
 ; Hide progress window
 HideProgressWindow() {
+    global ProgressWindowVisible
     static progressGui := ""
     if (progressGui != "") {
         progressGui.Hide()
@@ -381,6 +379,7 @@ RefreshProgress(*) {
 
 ; Update progress window content
 RefreshProgressContent() {
+    global ProgressWindowVisible
     static progressGui := ""
     static progressText := ""
     
@@ -399,6 +398,7 @@ RefreshProgressContent() {
 
 ; Build comprehensive progress content for the progress window
 BuildProgressContent() {
+    global CurrentStreamer, SessionStartTime, StreamerProgress
     currentTime := A_Now
     content := "TWITCH DROPS AUTOMATION - REAL-TIME PROGRESS`n"
     content .= RepeatString("=", 80) . "`n`n"
@@ -857,6 +857,7 @@ WatchStreamerWithChecks(streamer) {
 
 ; Watch streamer with periodic live checks every 10 minutes
 WatchWithPeriodicChecks(streamer, maxMinutes) {
+    global SkipCurrentStreamer, ProgressWindowVisible
     totalWatchedThisSession := 0
     checkIntervalMinutes := 10
     
@@ -981,6 +982,7 @@ OpenChromeForStreamer(streamer) {
 
 ; Wait for specified duration with Chrome monitoring (updated to return success/failure)
 WaitForDuration(minutes) {
+    global SkipCurrentStreamer, ProgressWindowVisible
     totalSeconds := minutes * 60
     remainingSeconds := totalSeconds
     
@@ -1028,8 +1030,17 @@ WaitForDuration(minutes) {
 CloseAllChrome() {
     try {
         for window in WinGetList("ahk_class Chrome_WidgetWin_1") {
-            if (InStr(WinGetTitle(window), "Chrome") || WinGetTitle(window) != "") {
+            windowTitle := WinGetTitle(window)
+            windowProcess := WinGetProcessName(window)
+            
+            ; Only close if it's actually Chrome browser (not other Chromium-based apps like VSCode)
+            if (windowProcess = "chrome.exe" || windowProcess = "Google Chrome.exe") {
+                if (DEBUG_MODE) {
+                    FileAppend("Closing Chrome window: " . windowTitle . " (Process: " . windowProcess . ")`n", A_ScriptDir "\\drops_status.txt")
+                }
                 WinClose(window)
+            } else if (DEBUG_MODE) {
+                FileAppend("Skipping non-Chrome window: " . windowTitle . " (Process: " . windowProcess . ")`n", A_ScriptDir "\\drops_status.txt")
             }
         }
         Sleep 2000  ; Wait for windows to close

@@ -2223,3 +2223,1091 @@ Offline: 1 streamers
 Selected streamer: Foolish - Streamer Drop (need 60 min)\n[20250926155946] Starting 60 minute session for Foolish
 Started session for Foolish (10 min)
 [20250926155946] Time remaining this session: 10.0 minutes
+[20250927115155] Starting Dynamic Twitch Rust Drops Automation...
+[20250927115155] Fetching data from https://twitch.facepunch.com/
+[20250927115155] Successfully fetched HTML content. Length: 65297 characters
+[20250927115155] Parsing HTML content from Facepunch registry...
+[20250927115155] Parsed 0 streamers from registry.
+[20250927115156] Parsing complete: Streamer drops=28, General drops=21, Total=49
+PARSED STREAMERS FROM FACEPUNCH REGISTRY
+============================================================
+
+1. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+
+2. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+
+3. TeaGuyTom (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TeaGuyTom
+
+4. triciaisabirdy (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/triciaisabirdy
+
+5. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+
+6. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+
+7. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+
+8. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+
+9. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+
+10. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+
+11. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+
+12. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+
+13. MaryMaybe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MaryMaybe
+
+14. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+
+15. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+
+16. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+
+17. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+
+18. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+
+19. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+
+20. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+
+21. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+
+22. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+
+23. SlightlyPoetic (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/SlightlyPoetic
+
+24. Picco (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Picco
+
+25. Farmerlucas (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Farmerlucas
+
+26. sukidingels (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/sukidingels
+
+27. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+
+28. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+
+GENERAL DROPS (work on any Rust stream)
+============================================================
+
+1. General Drop (2h)
+   Required: 2 hours (120 minutes)
+   Works on: Any Rust category stream
+
+2. General Drop (4h)
+   Required: 4 hours (240 minutes)
+   Works on: Any Rust category stream
+
+3. General Drop (6h)
+   Required: 6 hours (360 minutes)
+   Works on: Any Rust category stream
+
+4. General Drop (8h)
+   Required: 8 hours (480 minutes)
+   Works on: Any Rust category stream
+
+5. General Drop (10h)
+   Required: 10 hours (600 minutes)
+   Works on: Any Rust category stream
+
+6. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+7. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+8. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+9. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+10. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+11. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+12. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+13. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+14. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+15. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+16. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+17. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+18. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+19. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+20. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+21. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+[20250927115156] Initialized progress tracking: streamer-specific=28, general=21, total streamers tracked=28
+CURRENT PROGRESS SUMMARY
+============================================================
+
+Total streamers: 28
+Complete: 0 ?
+Incomplete: 28
+Total time watched: 0.0 hours
+
+INCOMPLETE STREAMERS:
+  1. Abe - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  2. Emiru - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  3. Farmerlucas - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  4. Foolish - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  5. MaryMaybe - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  6. Masayoshi - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  7. MichiMochievee - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  8. Picco - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  9. SlightlyPoetic - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  10. Sykkuno - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  11. TeaGuyTom - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  12. TinaKitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  13. Trainwreckstv - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  14. cyr - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  15. drops - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  16. ellum - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  17. fuslie - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  18. hJune - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  19. itsRyanHiga - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  20. kkatamina - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  21. login - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  22. peterpark - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  23. shxtou - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  24. starsmitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  25. sukidingels - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  26. triciaisabirdy - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  27. willneff - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  28. xChocoBars - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+
+CHECKING LIVE STATUS FOR STREAMERS
+============================================================
+
+1. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+   Progress: 0/60 minutes
+
+2. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+   Progress: 0/60 minutes
+
+3. TeaGuyTom (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TeaGuyTom
+   Progress: 0/60 minutes
+
+4. triciaisabirdy (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/triciaisabirdy
+   Progress: 0/60 minutes
+
+5. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+   Progress: 0/60 minutes
+
+6. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+   Progress: 0/60 minutes
+
+7. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+   Progress: 0/60 minutes
+
+8. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+   Progress: 0/60 minutes
+
+9. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+   Progress: 0/60 minutes
+
+10. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+   Progress: 0/60 minutes
+
+11. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+   Progress: 0/60 minutes
+
+12. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+   Progress: 0/60 minutes
+
+13. MaryMaybe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MaryMaybe
+   Progress: 0/60 minutes
+
+14. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+   Progress: 0/60 minutes
+
+15. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+   Progress: 0/60 minutes
+
+16. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+   Progress: 0/60 minutes
+
+17. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+   Progress: 0/60 minutes
+
+18. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+   Progress: 0/60 minutes
+
+19. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+   Progress: 0/60 minutes
+
+20. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+   Progress: 0/60 minutes
+
+21. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+   Progress: 0/60 minutes
+
+22. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+   Progress: 0/60 minutes
+
+23. SlightlyPoetic (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/SlightlyPoetic
+   Progress: 0/60 minutes
+
+24. Picco (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Picco
+   Progress: 0/60 minutes
+
+25. Farmerlucas (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Farmerlucas
+   Progress: 0/60 minutes
+
+26. sukidingels (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/sukidingels
+   Progress: 0/60 minutes
+
+27. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+   Progress: 0/60 minutes
+
+28. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+   Progress: 0/60 minutes
+
+DEBUG: https://www.twitch.tv/Foolish - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/TinaKitten - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/TeaGuyTom - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/triciaisabirdy - Live patterns: 5949,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Abe - Live patterns: 5502,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/ellum - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Masayoshi - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/hJune - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Sykkuno - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/xChocoBars - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/starsmitten - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Emiru - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/MaryMaybe - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/fuslie - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/peterpark - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/willneff - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/shxtou - Live patterns: 5589,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/MichiMochievee - Live patterns: 6197,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Trainwreckstv - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/kkatamina - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/itsRyanHiga - Live patterns: 5760,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/cyr - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/SlightlyPoetic - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Picco - Live patterns: 5496,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Farmerlucas - Live patterns: 6038,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/sukidingels - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/drops - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/login - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+LIVE STATUS CHECK RESULTS
+============================================================
+
+Checked: 28 streamers
+Live: 7 streamers
+Offline: 21 streamers
+
+?? LIVE STREAMERS:
+  1. triciaisabirdy - Streamer Drop (need 60 more min)
+  2. Abe - Streamer Drop (need 60 more min)
+  3. shxtou - Streamer Drop (need 60 more min)
+  4. MichiMochievee - Streamer Drop (need 60 more min)
+  5. itsRyanHiga - Streamer Drop (need 60 more min)
+  6. Picco - Streamer Drop (need 60 more min)
+  7. Farmerlucas - Streamer Drop (need 60 more min)
+
+?? OFFLINE STREAMERS:
+  1. Foolish - Streamer Drop (need 60 more min)
+  2. TinaKitten - Streamer Drop (need 60 more min)
+  3. TeaGuyTom - Streamer Drop (need 60 more min)
+  4. ellum - Streamer Drop (need 60 more min)
+  5. Masayoshi - Streamer Drop (need 60 more min)
+  6. hJune - Streamer Drop (need 60 more min)
+  7. Sykkuno - Streamer Drop (need 60 more min)
+  8. xChocoBars - Streamer Drop (need 60 more min)
+  9. starsmitten - Streamer Drop (need 60 more min)
+  10. Emiru - Streamer Drop (need 60 more min)
+  11. MaryMaybe - Streamer Drop (need 60 more min)
+  12. fuslie - Streamer Drop (need 60 more min)
+  13. peterpark - Streamer Drop (need 60 more min)
+  14. willneff - Streamer Drop (need 60 more min)
+  15. Trainwreckstv - Streamer Drop (need 60 more min)
+  16. kkatamina - Streamer Drop (need 60 more min)
+  17. cyr - Streamer Drop (need 60 more min)
+  18. SlightlyPoetic - Streamer Drop (need 60 more min)
+  19. sukidingels - Streamer Drop (need 60 more min)
+  20. drops - Streamer Drop (need 60 more min)
+  21. login - Streamer Drop (need 60 more min)
+Selected streamer: triciaisabirdy - Streamer Drop (need 60 min)\n[20250927115304] Starting 60 minute session for triciaisabirdy
+Started session for triciaisabirdy (10 min)
+[20250927115304] Time remaining this session: 10.0 minutes
+Automation stopped by user (Ctrl+Alt+Q).
+[20250927120432] Starting Dynamic Twitch Rust Drops Automation...
+[20250927120432] Fetching data from https://twitch.facepunch.com/
+[20250927120432] Successfully fetched HTML content. Length: 65282 characters
+[20250927120432] Parsing HTML content from Facepunch registry...
+[20250927120432] Parsed 0 streamers from registry.
+[20250927120432] Parsing complete: Streamer drops=28, General drops=21, Total=49
+PARSED STREAMERS FROM FACEPUNCH REGISTRY
+============================================================
+
+1. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+
+2. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+
+3. TeaGuyTom (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TeaGuyTom
+
+4. triciaisabirdy (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/triciaisabirdy
+
+5. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+
+6. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+
+7. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+
+8. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+
+9. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+
+10. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+
+11. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+
+12. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+
+13. MaryMaybe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MaryMaybe
+
+14. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+
+15. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+
+16. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+
+17. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+
+18. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+
+19. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+
+20. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+
+21. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+
+22. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+
+23. SlightlyPoetic (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/SlightlyPoetic
+
+24. Picco (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Picco
+
+25. Farmerlucas (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Farmerlucas
+
+26. sukidingels (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/sukidingels
+
+27. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+
+28. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+
+GENERAL DROPS (work on any Rust stream)
+============================================================
+
+1. General Drop (2h)
+   Required: 2 hours (120 minutes)
+   Works on: Any Rust category stream
+
+2. General Drop (4h)
+   Required: 4 hours (240 minutes)
+   Works on: Any Rust category stream
+
+3. General Drop (6h)
+   Required: 6 hours (360 minutes)
+   Works on: Any Rust category stream
+
+4. General Drop (8h)
+   Required: 8 hours (480 minutes)
+   Works on: Any Rust category stream
+
+5. General Drop (10h)
+   Required: 10 hours (600 minutes)
+   Works on: Any Rust category stream
+
+6. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+7. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+8. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+9. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+10. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+11. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+12. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+13. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+14. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+15. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+16. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+17. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+18. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+19. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+20. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+21. General Drop (1h)
+   Required: 1 hours (60 minutes)
+   Works on: Any Rust category stream
+
+[20250927120432] Initialized progress tracking: streamer-specific=28, general=21, total streamers tracked=28
+CURRENT PROGRESS SUMMARY
+============================================================
+
+Total streamers: 28
+Complete: 0 ?
+Incomplete: 28
+Total time watched: 0.0 hours
+
+INCOMPLETE STREAMERS:
+  1. Abe - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  2. Emiru - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  3. Farmerlucas - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  4. Foolish - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  5. MaryMaybe - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  6. Masayoshi - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  7. MichiMochievee - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  8. Picco - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  9. SlightlyPoetic - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  10. Sykkuno - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  11. TeaGuyTom - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  12. TinaKitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  13. Trainwreckstv - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  14. cyr - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  15. drops - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  16. ellum - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  17. fuslie - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  18. hJune - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  19. itsRyanHiga - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  20. kkatamina - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  21. login - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  22. peterpark - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  23. shxtou - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  24. starsmitten - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  25. sukidingels - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  26. triciaisabirdy - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  27. willneff - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+  28. xChocoBars - Streamer Drop
+     Progress: 0/60 min (need 60 more)
+
+CHECKING LIVE STATUS FOR STREAMERS
+============================================================
+
+1. Foolish (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Foolish
+   Progress: 0/60 minutes
+
+2. TinaKitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TinaKitten
+   Progress: 0/60 minutes
+
+3. TeaGuyTom (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/TeaGuyTom
+   Progress: 0/60 minutes
+
+4. triciaisabirdy (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/triciaisabirdy
+   Progress: 0/60 minutes
+
+5. Abe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Abe
+   Progress: 0/60 minutes
+
+6. ellum (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/ellum
+   Progress: 0/60 minutes
+
+7. Masayoshi (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Masayoshi
+   Progress: 0/60 minutes
+
+8. hJune (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/hJune
+   Progress: 0/60 minutes
+
+9. Sykkuno (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Sykkuno
+   Progress: 0/60 minutes
+
+10. xChocoBars (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/xChocoBars
+   Progress: 0/60 minutes
+
+11. starsmitten (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/starsmitten
+   Progress: 0/60 minutes
+
+12. Emiru (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Emiru
+   Progress: 0/60 minutes
+
+13. MaryMaybe (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MaryMaybe
+   Progress: 0/60 minutes
+
+14. fuslie (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/fuslie
+   Progress: 0/60 minutes
+
+15. peterpark (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/peterpark
+   Progress: 0/60 minutes
+
+16. willneff (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/willneff
+   Progress: 0/60 minutes
+
+17. shxtou (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/shxtou
+   Progress: 0/60 minutes
+
+18. MichiMochievee (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/MichiMochievee
+   Progress: 0/60 minutes
+
+19. Trainwreckstv (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Trainwreckstv
+   Progress: 0/60 minutes
+
+20. kkatamina (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/kkatamina
+   Progress: 0/60 minutes
+
+21. itsRyanHiga (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/itsRyanHiga
+   Progress: 0/60 minutes
+
+22. cyr (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/cyr
+   Progress: 0/60 minutes
+
+23. SlightlyPoetic (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/SlightlyPoetic
+   Progress: 0/60 minutes
+
+24. Picco (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Picco
+   Progress: 0/60 minutes
+
+25. Farmerlucas (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/Farmerlucas
+   Progress: 0/60 minutes
+
+26. sukidingels (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/sukidingels
+   Progress: 0/60 minutes
+
+27. drops (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/drops
+   Progress: 0/60 minutes
+
+28. login (streamer)
+   Item: Streamer Drop
+   Required: 60 minutes
+   URL: https://www.twitch.tv/login
+   Progress: 0/60 minutes
+
+DEBUG: https://www.twitch.tv/Foolish - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/TinaKitten - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/TeaGuyTom - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/triciaisabirdy - Live patterns: 5949,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Abe - Live patterns: 5502,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/ellum - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Masayoshi - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/hJune - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Sykkuno - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/xChocoBars - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/starsmitten - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Emiru - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/MaryMaybe - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/fuslie - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/peterpark - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/willneff - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/shxtou - Live patterns: 5589,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/MichiMochievee - Live patterns: 6197,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Trainwreckstv - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/kkatamina - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/itsRyanHiga - Live patterns: 5760,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/cyr - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/SlightlyPoetic - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Picco - Live patterns: 5496,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/Farmerlucas - Live patterns: 6038,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/sukidingels - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/drops - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+DEBUG: https://www.twitch.tv/login - Live patterns: 0,0,0,0 | Offline patterns: 0,0,0
+LIVE STATUS CHECK RESULTS
+============================================================
+
+Checked: 28 streamers
+Live: 7 streamers
+Offline: 21 streamers
+
+?? LIVE STREAMERS:
+  1. triciaisabirdy - Streamer Drop (need 60 more min)
+  2. Abe - Streamer Drop (need 60 more min)
+  3. shxtou - Streamer Drop (need 60 more min)
+  4. MichiMochievee - Streamer Drop (need 60 more min)
+  5. itsRyanHiga - Streamer Drop (need 60 more min)
+  6. Picco - Streamer Drop (need 60 more min)
+  7. Farmerlucas - Streamer Drop (need 60 more min)
+
+?? OFFLINE STREAMERS:
+  1. Foolish - Streamer Drop (need 60 more min)
+  2. TinaKitten - Streamer Drop (need 60 more min)
+  3. TeaGuyTom - Streamer Drop (need 60 more min)
+  4. ellum - Streamer Drop (need 60 more min)
+  5. Masayoshi - Streamer Drop (need 60 more min)
+  6. hJune - Streamer Drop (need 60 more min)
+  7. Sykkuno - Streamer Drop (need 60 more min)
+  8. xChocoBars - Streamer Drop (need 60 more min)
+  9. starsmitten - Streamer Drop (need 60 more min)
+  10. Emiru - Streamer Drop (need 60 more min)
+  11. MaryMaybe - Streamer Drop (need 60 more min)
+  12. fuslie - Streamer Drop (need 60 more min)
+  13. peterpark - Streamer Drop (need 60 more min)
+  14. willneff - Streamer Drop (need 60 more min)
+  15. Trainwreckstv - Streamer Drop (need 60 more min)
+  16. kkatamina - Streamer Drop (need 60 more min)
+  17. cyr - Streamer Drop (need 60 more min)
+  18. SlightlyPoetic - Streamer Drop (need 60 more min)
+  19. sukidingels - Streamer Drop (need 60 more min)
+  20. drops - Streamer Drop (need 60 more min)
+  21. login - Streamer Drop (need 60 more min)
+Selected streamer: triciaisabirdy - Streamer Drop (need 60 min)\nSkipping non-Chrome window: test-chrome-windows.ahk - ahk-scripts - Visual Studio Code (Process: Code.exe)
+[20250927120513] Starting 60 minute session for triciaisabirdy
+Started session for triciaisabirdy (10 min)
+[20250927120513] Time remaining this session: 10.0 minutes
