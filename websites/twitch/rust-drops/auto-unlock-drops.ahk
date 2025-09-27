@@ -34,7 +34,7 @@ IsUserLive(twitchUrl) {
         if (DEBUG_MODE) {
             patterns := "Live patterns: " . isLivePattern1 . "," . isLivePattern2 . "," . isLivePattern3 . "," . isLivePattern4
             patterns .= " | Offline patterns: " . isOfflinePattern1 . "," . isOfflinePattern2 . "," . isOfflinePattern3
-            FileAppend("DEBUG: " . twitchUrl . " - " . patterns . "`n", A_ScriptDir "\\drops_status.txt")
+            FileAppend("DEBUG: " . twitchUrl . " - " . patterns . "`n", A_ScriptDir "/drops_status.txt")
         }
         
         ; If we find offline indicators, definitely not live
