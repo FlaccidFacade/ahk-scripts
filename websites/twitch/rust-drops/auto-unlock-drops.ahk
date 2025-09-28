@@ -1,4 +1,5 @@
 #Requires AutoHotkey v2.0
+#SingleInstance Force
 
 ; Main Twitch Rust Drops Automation Script
 ; This script fetches streamer data from Facepunch registry, checks who's live,
@@ -67,14 +68,455 @@ RepeatString(str, count) {
     return result
 }
 
+; Check a specific streamer's page for drop progress
+CheckStreamerPageProgress(streamerUrl, streamerName) {
+    try {
+        http := ComObject("WinHttp.WinHttpRequest.5.1")
+        http.Open("GET", streamerUrl, false)
+        http.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+        http.Send()
+        
+        if (http.Status == 200) {
+            response := http.ResponseText
+            
+            ; Look for progress indicators on the streamer page
+            ; Pattern 1: "84% progress toward Rust Drops on /streamername"
+            if (RegExMatch(response, 'i)(\d{1,3})%\s+progress\s+toward.*?drops', &match)) {
+                progressPercent := Integer(match[1])
+                if (DEBUG_MODE) {
+                    FileAppend("Found progress on " . streamerName . " page: " . progressPercent . "%`n", A_ScriptDir "/drops_status.txt")
+                }
+                return progressPercent >= 100 ? true : (progressPercent / 100.0)
+            }
+            
+            ; Pattern 2: Look for CoreText or similar class with progress
+            if (RegExMatch(response, 'i)class="[^"]*CoreText[^"]*"[^>]*>(\d{1,3})%\s+progress', &match)) {
+                progressPercent := Integer(match[1])
+                if (DEBUG_MODE) {
+                    FileAppend("Found CoreText progress on " . streamerName . " page: " . progressPercent . "%`n", A_ScriptDir "/drops_status.txt")
+                }
+                return progressPercent >= 100 ? true : (progressPercent / 100.0)
+            }
+            
+            ; Pattern 3: General progress text patterns
+            if (RegExMatch(response, 'i)(\d{1,3})%[^<]{0,50}?(progress|complete|toward)', &match)) {
+                progressPercent := Integer(match[1])
+                if (DEBUG_MODE) {
+                    FileAppend("Found general progress on " . streamerName . " page: " . progressPercent . "%`n", A_ScriptDir "/drops_status.txt")
+                }
+                return progressPercent >= 100 ? true : (progressPercent / 100.0)
+            }
+        }
+    } catch as err {
+        if (DEBUG_MODE) {
+            FileAppend("Error checking " . streamerName . " page: " . err.message . "`n", A_ScriptDir "/drops_status.txt")
+        }
+    }
+    
+    return false
+}
+
+; Check Twitch drops inventory to see what drops are already completed
+CheckDropsInventory() {
+    global CompletedDrops := Map()
+    
+    if (DEBUG_MODE) {
+        FileAppend("=== STARTING INVENTORY CHECK ===`n", A_ScriptDir "/drops_status.txt")
+    }
+    
+    ; First try to use local sample file if available for testing
+    try {
+        sampleFile := A_ScriptDir "\\sample-twitch.tv\\drops\\inventory-values.html"
+        if (FileExist(sampleFile)) {
+            response := FileRead(sampleFile)
+            if (DEBUG_MODE) {
+                FileAppend("Using sample inventory file (length: " . StrLen(response) . " chars)`n", A_ScriptDir "/drops_status.txt")
+            }
+            ParseInventoryData(response)
+            
+            if (DEBUG_MODE) {
+                FileAppend("Sample inventory parsing complete. Found " . CompletedDrops.Count . " entries.`n", A_ScriptDir "/drops_status.txt")
+                if (CompletedDrops.Count > 0) {
+                    for dropName, progress in CompletedDrops {
+                        progressText := (progress == true) ? "100%" : (Round(progress * 100, 1) . "%")
+                        FileAppend("  - " . dropName . ": " . progressText . "`n", A_ScriptDir "/drops_status.txt")
+                    }
+                }
+                FileAppend("=== INVENTORY CHECK COMPLETE (USING SAMPLE) ===`n", A_ScriptDir "/drops_status.txt")
+            }
+            return true
+        }
+    } catch as err {
+        if (DEBUG_MODE) {
+            FileAppend("Sample file not available: " . err.message . "`n", A_ScriptDir "/drops_status.txt")
+        }
+    }
+    
+    ; Fallback to trying live inventory (will likely fail due to authentication)
+    try {
+        ; Send a GET request to the Twitch drops inventory
+        http := ComObject("WinHttp.WinHttpRequest.5.1")
+        http.Open("GET", "https://www.twitch.tv/drops/inventory")
+        http.Send()
+        
+        response := http.ResponseText
+        
+        if (DEBUG_MODE) {
+            FileAppend("Fetched drops inventory data (length: " . StrLen(response) . " chars)`n", A_ScriptDir "/drops_status.txt")
+            ; Check if response contains authentication issues
+            if (InStr(response, "Sign Up") || InStr(response, "Log In") || InStr(response, "login")) {
+                FileAppend("WARNING: Response may indicate login required for inventory access`n", A_ScriptDir "/drops_status.txt")
+            }
+            ; Sample the HTML content
+            sample := SubStr(response, 1, 1000)
+            FileAppend("Sample HTML content: " . sample . "`n", A_ScriptDir "/drops_status.txt")
+        }
+        
+        ; Parse the inventory for completed drops
+        ; Look for patterns that indicate 100% completion
+        ParseInventoryData(response)
+        
+        if (DEBUG_MODE) {
+            FileAppend("Inventory parsing complete. Found " . CompletedDrops.Count . " entries.`n", A_ScriptDir "/drops_status.txt")
+            if (CompletedDrops.Count > 0) {
+                for dropName, progress in CompletedDrops {
+                    progressText := (progress == true) ? "100%" : (Round(progress * 100, 1) . "%")
+                    FileAppend("  - " . dropName . ": " . progressText . "`n", A_ScriptDir "/drops_status.txt")
+                }
+            }
+            FileAppend("=== INVENTORY CHECK COMPLETE ===`n", A_ScriptDir "/drops_status.txt")
+        }
+        
+        return true
+        
+    } catch Error as e {
+        if (DEBUG_MODE) {
+            FileAppend("Failed to fetch drops inventory: " . e.Message . "`n", A_ScriptDir "/drops_status.txt")
+            Notify("Failed to fetch drops inventory: " . e.Message, 6)
+        }
+        return false
+    }
+}
+
+; Parse inventory response to find completed drops with streamer names
+ParseInventoryData(html) {
+    global CompletedDrops
+    
+    ; Clear existing completed drops data
+    CompletedDrops := Map()
+    
+    ; Look for drop completion indicators in the HTML
+    ; Focus on finding streamer names with their progress
+    
+    completedCount := 0
+    
+    ; Pattern 1: Look for Twitch URLs with streamer names and progress
+    ; Example: href="https://twitch.tv/streamername" followed by progress data
+    pos := 1
+    while (pos := RegExMatch(html, 'i)twitch\.tv/([a-zA-Z0-9_]+)[^>]{0,200}?(\d{1,3})%', &match, pos)) {
+        streamerName := match[1]
+        progressPercent := Integer(match[2])
+        
+        ; Only store reasonable progress values (1-100%)
+        if (progressPercent >= 1 && progressPercent <= 100) {
+            CompletedDrops[streamerName] := progressPercent >= 100 ? true : (progressPercent / 100.0)
+            completedCount++
+            if (DEBUG_MODE) {
+                FileAppend("Found streamer progress: " . streamerName . " (" . progressPercent . "%)`n", A_ScriptDir "/drops_status.txt")
+            }
+        }
+        pos := match.Pos + match.Len
+    }
+    
+    ; Pattern 2: Look for data attributes with streamer info
+    ; Example: data-streamer="streamername" or similar patterns
+    pos := 1
+    while (pos := RegExMatch(html, 'i)data-[^=]*streamer[^=]*=.([a-zA-Z0-9_]+).[^>]{0,300}?(\d{1,3})%', &match, pos)) {
+        streamerName := match[1]
+        progressPercent := Integer(match[2])
+        
+        if (progressPercent >= 1 && progressPercent <= 100) {
+            CompletedDrops[streamerName] := progressPercent >= 100 ? true : (progressPercent / 100.0)
+            completedCount++
+            if (DEBUG_MODE) {
+                FileAppend("Found streamer data attribute: " . streamerName . " (" . progressPercent . "%)`n", A_ScriptDir "/drops_status.txt")
+            }
+        }
+        pos := match.Pos + match.Len
+    }
+    
+    ; Pattern 3: Look for JSON-like progress with channel names
+    ; Example: "channelName":"streamername","progress":0.41
+    pos := 1
+    while (pos := RegExMatch(html, 'i)"(?:channel|streamer)(?:Name|Login)"\s*:\s*"([a-zA-Z0-9_]+)"[^}]{0,200}?"progress"\s*:\s*([0-9.]+)', &match, pos)) {
+        streamerName := match[1]
+        progress := Float(match[2])
+        
+        if (progress > 0) {
+            CompletedDrops[streamerName] := progress >= 1.0 ? true : progress
+            completedCount++
+            if (DEBUG_MODE) {
+                progressPercent := progress >= 1.0 ? "100%" : Round(progress * 100, 1) . "%"
+                FileAppend("Found JSON streamer progress: " . streamerName . " (" . progressPercent . ")`n", A_ScriptDir "/drops_status.txt")
+            }
+        }
+        pos := match.Pos + match.Len
+    }
+    
+    ; Pattern 4: Reverse pattern - look for progress first, then streamer
+    ; Example: "progress":0.41 followed by streamer info
+    pos := 1
+    while (pos := RegExMatch(html, 'i)"progress"\s*:\s*([0-9.]+)[^}]{0,200}?"(?:channel|streamer)(?:Name|Login)"\s*:\s*"([a-zA-Z0-9_]+)"', &match, pos)) {
+        progress := Float(match[1])
+        streamerName := match[2]
+        
+        if (progress > 0) {
+            CompletedDrops[streamerName] := progress >= 1.0 ? true : progress
+            completedCount++
+            if (DEBUG_MODE) {
+                progressPercent := progress >= 1.0 ? "100%" : Round(progress * 100, 1) . "%"
+                FileAppend("Found reverse JSON streamer progress: " . streamerName . " (" . progressPercent . ")`n", A_ScriptDir "/drops_status.txt")
+            }
+        }
+        pos := match.Pos + match.Len
+    }
+    
+    ; Pattern 5: Look for streamer names in general text patterns with progress
+    ; This catches cases where streamers are mentioned with percentage nearby
+    streamersList := ["trausi", "hjune", "spoonkid", "blooprint", "aloneintokyo", "coconutb", "posty", "ramsey", "willjum"]
+    
+    for streamerName in streamersList {
+        ; Look for this streamer name with progress percentage nearby (within 100 characters)
+        pattern := 'i)' . streamerName . '[^%]{0,100}?(\d{1,3})%|(\d{1,3})%[^' . streamerName . ']{0,100}?' . streamerName
+        pos := 1
+        while (pos := RegExMatch(html, pattern, &match, pos)) {
+            progressPercent := match[1] != "" ? Integer(match[1]) : Integer(match[2])
+            
+            if (progressPercent >= 1 && progressPercent <= 100) {
+                ; Only update if we don't already have this streamer or if new progress is higher
+                if (!CompletedDrops.Has(streamerName) || 
+                    (CompletedDrops.Has(streamerName) && CompletedDrops[streamerName] != true && (progressPercent / 100.0) > CompletedDrops[streamerName])) {
+                    
+                    CompletedDrops[streamerName] := progressPercent >= 100 ? true : (progressPercent / 100.0)
+                    completedCount++
+                    if (DEBUG_MODE) {
+                        FileAppend("Found known streamer progress: " . streamerName . " (" . progressPercent . "%)`n", A_ScriptDir "/drops_status.txt")
+                    }
+                }
+            }
+            pos := match.Pos + match.Len
+        }
+    }
+    
+    ; Pattern 6: Look for progress text on streamer pages
+    ; Example: "84% progress toward Rust Drops on /streamername"
+    pos := 1
+    while (pos := RegExMatch(html, 'i)(\d{1,3})%\s+progress\s+toward\s+[^/]*/([a-zA-Z0-9_]+)', &match, pos)) {
+        progressPercent := Integer(match[1])
+        streamerName := match[2]
+        
+        if (progressPercent >= 1 && progressPercent <= 100) {
+            CompletedDrops[streamerName] := progressPercent >= 100 ? true : (progressPercent / 100.0)
+            completedCount++
+            if (DEBUG_MODE) {
+                FileAppend("Found streamer page progress: " . streamerName . " (" . progressPercent . "%)`n", A_ScriptDir "/drops_status.txt")
+            }
+        }
+        pos := match.Pos + match.Len
+    }
+    
+    ; Pattern 7: Alternative streamer page progress format
+    ; Example: "progress toward Rust Drops" with percentage nearby
+    pos := 1
+    while (pos := RegExMatch(html, 'i)(\d{1,3})%[^<]{0,100}?progress\s+toward[^/]{0,50}?/([a-zA-Z0-9_]+)', &match, pos)) {
+        progressPercent := Integer(match[1])
+        streamerName := match[2]
+        
+        if (progressPercent >= 1 && progressPercent <= 100) {
+            CompletedDrops[streamerName] := progressPercent >= 100 ? true : (progressPercent / 100.0)
+            completedCount++
+            if (DEBUG_MODE) {
+                FileAppend("Found alt streamer progress: " . streamerName . " (" . progressPercent . "%)`n", A_ScriptDir "/drops_status.txt")
+            }
+        }
+        pos := match.Pos + match.Len
+    }
+    
+    ; Pattern 8: Look for specific "% of 1 hour" or "% of X hour" format
+    ; Example: <span class="CoreText-sc-1txzju1-0 cWFBTs">83</span>% of 1 hour
+    pos := 1
+    while (pos := RegExMatch(html, 'i)>(\d{1,3})</span>%\s+of\s+(\d+)\s+hour', &match, pos)) {
+        progressPercent := Integer(match[1])
+        hourRequirement := Integer(match[2])
+        
+        ; Convert to decimal based on hour requirement
+        if (progressPercent >= 1 && progressPercent <= 100 && hourRequirement > 0) {
+            progress := progressPercent >= 100 ? true : (progressPercent / 100.0)
+            
+            ; Look nearby for associated item or drop name
+            searchStart := Max(1, pos - 1000)
+            searchEnd := Min(StrLen(html), pos + 1000)
+            searchText := SubStr(html, searchStart, searchEnd - searchStart)
+            
+            ; Try to find item name in nearby HTML
+            if (RegExMatch(searchText, 'i)"([^"]{3,50})"[^>]*class="CoreText[^>]*>Kingdoms?\s*\d*\s*Rock', &itemMatch)) {
+                itemName := itemMatch[1]
+                CompletedDrops[itemName] := progress
+                completedCount++
+                if (DEBUG_MODE) {
+                    FileAppend("Found '" . progressPercent . "% of " . hourRequirement . " hour' progress: " . itemName . " (" . progressPercent . "%)`n", A_ScriptDir "/drops_status.txt")
+                }
+            } else {
+                ; Generic entry if we can't find specific item name
+                genericName := "Drop " . progressPercent . "% (1 hour requirement)"
+                CompletedDrops[genericName] := progress
+                completedCount++
+                if (DEBUG_MODE) {
+                    FileAppend("Found generic '" . progressPercent . "% of " . hourRequirement . " hour' progress entry`n", A_ScriptDir "/drops_status.txt")
+                }
+            }
+        }
+        pos := match.Pos + match.Len
+    }
+    
+    ; Pattern 9: Alternative "% of 1 hour" format with different HTML structure
+    pos := 1
+    while (pos := RegExMatch(html, 'i)(\d{1,3})%\s+of\s+(\d+)\s+hour', &match, pos)) {
+        progressPercent := Integer(match[1])
+        hourRequirement := Integer(match[2])
+        
+        if (progressPercent >= 1 && progressPercent <= 100 && hourRequirement > 0) {
+            progress := progressPercent >= 100 ? true : (progressPercent / 100.0)
+            
+            ; Look for campaign or drop name nearby
+            searchStart := Max(1, pos - 800)
+            searchEnd := Min(StrLen(html), pos + 200)
+            searchText := SubStr(html, searchStart, searchEnd - searchStart)
+            
+            ; Try various patterns to find the drop/campaign name
+            foundName := ""
+            if (RegExMatch(searchText, 'i)campaign[^>]*>([^<]{3,40})<', &nameMatch)) {
+                foundName := nameMatch[1]
+            } else if (RegExMatch(searchText, 'i)title[^>]*>([^<]{3,40})<', &nameMatch)) {
+                foundName := nameMatch[1]
+            } else if (RegExMatch(searchText, 'i)>([A-Za-z0-9\s]{3,40})\s+Rock<', &nameMatch)) {
+                foundName := nameMatch[1] . " Rock"
+            }
+            
+            if (foundName != "") {
+                CompletedDrops[foundName] := progress
+                completedCount++
+                if (DEBUG_MODE) {
+                    FileAppend("Found '" . progressPercent . "% of " . hourRequirement . " hour' for: " . foundName . "`n", A_ScriptDir "/drops_status.txt")
+                }
+            }
+        }
+        pos := match.Pos + match.Len
+    }
+    
+    if (DEBUG_MODE) {
+        FileAppend("Inventory check complete. Found " . completedCount . " streamer progress entries.`n", A_ScriptDir "/drops_status.txt")
+    }
+}
+
+; Check if a specific drop/item is already completed
+IsDropCompleted(dropName, itemName) {
+    global CompletedDrops
+    
+    ; Check by exact drop name
+    if (CompletedDrops.Has(dropName)) {
+        progress := CompletedDrops[dropName]
+        return (progress == true || progress >= 1.0)
+    }
+    
+    ; Check by item name
+    if (CompletedDrops.Has(itemName)) {
+        progress := CompletedDrops[itemName]
+        return (progress == true || progress >= 1.0)
+    }
+    
+    ; Check for partial matches (case-insensitive)
+    for completedDrop in CompletedDrops {
+        if (InStr(completedDrop, dropName) || InStr(completedDrop, itemName)) {
+            progress := CompletedDrops[completedDrop]
+            return (progress == true || progress >= 1.0)
+        }
+        if (InStr(dropName, completedDrop) || InStr(itemName, completedDrop)) {
+            progress := CompletedDrops[completedDrop]
+            return (progress == true || progress >= 1.0)
+        }
+    }
+    
+    return false
+}
+
+; Get progress percentage for a specific drop/item (0.0 to 1.0, or false if not found)
+GetDropProgress(dropName, itemName, streamerUrl := "") {
+    global CompletedDrops
+    
+    ; Check by exact drop name
+    if (CompletedDrops.Has(dropName)) {
+        progress := CompletedDrops[dropName]
+        return (progress == true) ? 1.0 : progress
+    }
+    
+    ; Check by item name  
+    if (CompletedDrops.Has(itemName)) {
+        progress := CompletedDrops[itemName]
+        return (progress == true) ? 1.0 : progress
+    }
+    
+    ; Check for partial matches (case-insensitive)
+    for completedDrop in CompletedDrops {
+        if (InStr(completedDrop, dropName) || InStr(completedDrop, itemName) ||
+            InStr(dropName, completedDrop) || InStr(itemName, completedDrop)) {
+            progress := CompletedDrops[completedDrop]
+            return (progress == true) ? 1.0 : progress
+        }
+    }
+    
+    ; If not found in inventory and we have a streamer URL, check the page directly
+    if (streamerUrl != "" && InStr(streamerUrl, "twitch.tv/")) {
+        pageProgress := CheckStreamerPageProgress(streamerUrl, dropName)
+        if (pageProgress != false) {
+            ; Cache the result for future use
+            CompletedDrops[dropName] := pageProgress
+            if (DEBUG_MODE) {
+                progressPercent := pageProgress == true ? "100%" : Round(pageProgress * 100, 1) . "%"
+                FileAppend("Cached progress from page check: " . dropName . " = " . progressPercent . "`n", A_ScriptDir "/drops_status.txt")
+            }
+            return pageProgress
+        }
+    }
+    
+    return false
+}
+
+; Safe file append function that handles access conflicts
+SafeFileAppend(text, filePath, maxRetries := 5) {
+    loop maxRetries {
+        try {
+            FileAppend(text, filePath)
+            return true  ; Success
+        } catch as err {
+            if (A_Index >= maxRetries) {
+                ; Last attempt failed, give up
+                if (DEBUG_MODE) {
+                    TrayTip("File Write Error", "Could not write to " . filePath . " after " . maxRetries . " attempts", 3)
+                }
+                return false
+            }
+            ; Wait a bit and try again
+            Sleep(50 * A_Index)  ; Progressive delay: 50ms, 100ms, 150ms, etc.
+        }
+    }
+    return false
+}
+
 ; Non-blocking notification + logging helper with GUI window option
 Notify(text, seconds := 4, showWindow := false) {
-    ; append to status file
-    try {
-        FileAppend(Format("[{1}] {2}`n", A_Now, text), A_ScriptDir "\\drops_status.txt")
-    } catch {
-        ; ignore file write errors
-    }
+    ; append to status file safely
+    SafeFileAppend(Format("[{1}] {2}`n", A_Now, text), A_ScriptDir "\\drops_status.txt")
     
     ; Show in GUI window or tray tip based on preference
     if (showWindow) {
@@ -132,9 +574,28 @@ PrintStreamerSummary(title, streamers, includeProgress := false) {
         
         if (includeProgress && StreamerProgress.Has(streamer.username)) {
             progress := StreamerProgress[streamer.username]
-            summary .= "   Progress: " . progress.timeWatched . "/" . progress.requiredMinutes . " minutes"
-            if (progress.isComplete) {
-                summary .= " ✓ COMPLETE"
+            
+            ; Check inventory progress
+            inventoryProgress := GetDropProgress(streamer.dropType, streamer.itemName, streamer.url)
+            if (inventoryProgress != false) {
+                ; Use inventory progress if available (convert to minutes)
+                inventoryMinutesCompleted := inventoryProgress * streamer.minutes
+                ; Use the higher of local tracking or inventory progress
+                totalMinutesCompleted := Max(progress.timeWatched, inventoryMinutesCompleted)
+                progressPercent := (totalMinutesCompleted / streamer.minutes) * 100
+                
+                summary .= "   Progress: " . Round(totalMinutesCompleted, 1) . "/" . streamer.minutes . " minutes (" . Round(progressPercent, 1) . "%)"
+                if (inventoryProgress == true || inventoryProgress >= 1.0) {
+                    summary .= " ✓ COMPLETE"
+                } else {
+                    summary .= " [Inventory: " . Round(inventoryProgress * 100, 1) . "%]"
+                }
+            } else {
+                ; Use local progress only
+                summary .= "   Progress: " . progress.timeWatched . "/" . progress.requiredMinutes . " minutes"
+                if (progress.isComplete) {
+                    summary .= " ✓ COMPLETE"
+                }
             }
             summary .= "`n"
         }
@@ -143,7 +604,7 @@ PrintStreamerSummary(title, streamers, includeProgress := false) {
     }
     
     ; write summary to file and show a short tray notification instead of blocking MsgBox
-    FileAppend(summary, A_ScriptDir "\\drops_status.txt")
+    SafeFileAppend(summary, A_ScriptDir "\\drops_status.txt")
     TrayTip("Twitch Drops", "Streamer list updated (saved to drops_status.txt)", 5)
 }
 
@@ -159,9 +620,24 @@ PrintLiveCheckResults(checkedStreamers, liveStreamers) {
         summary .= "🟢 LIVE STREAMERS:`n"
         for i, streamer in liveStreamers {
             progress := StreamerProgress[streamer.username]
-            remaining := streamer.minutes - progress.timeWatched
+            
+            ; Check inventory progress
+            inventoryProgress := GetDropProgress(streamer.dropType, streamer.itemName, streamer.url)
+            if (inventoryProgress != false) {
+                ; Use inventory progress if available (convert to minutes)
+                inventoryMinutesCompleted := inventoryProgress * streamer.minutes
+                ; Use the higher of local tracking or inventory progress
+                totalMinutesCompleted := Max(progress.timeWatched, inventoryMinutesCompleted)
+            } else {
+                ; Use local progress tracking only
+                totalMinutesCompleted := progress.timeWatched
+            }
+            
+            remaining := streamer.minutes - totalMinutesCompleted
+            progressPercent := (totalMinutesCompleted / streamer.minutes) * 100
+            
             summary .= "  " . i . ". " . streamer.username . " - " . streamer.itemName
-            summary .= " (need " . remaining . " more min)`n"
+            summary .= " (" . Round(progressPercent, 1) . "% - need " . Round(remaining, 1) . " more min)`n"
         }
         summary .= "`n"
     }
@@ -185,9 +661,24 @@ PrintLiveCheckResults(checkedStreamers, liveStreamers) {
         summary .= "🔴 OFFLINE STREAMERS:`n"
         for i, streamer in offlineStreamers {
             progress := StreamerProgress[streamer.username]
-            remaining := streamer.minutes - progress.timeWatched
+            
+            ; Check inventory progress
+            inventoryProgress := GetDropProgress(streamer.dropType, streamer.itemName, streamer.url)
+            if (inventoryProgress != false) {
+                ; Use inventory progress if available (convert to minutes)
+                inventoryMinutesCompleted := inventoryProgress * streamer.minutes
+                ; Use the higher of local tracking or inventory progress
+                totalMinutesCompleted := Max(progress.timeWatched, inventoryMinutesCompleted)
+            } else {
+                ; Use local progress tracking only
+                totalMinutesCompleted := progress.timeWatched
+            }
+            
+            remaining := streamer.minutes - totalMinutesCompleted
+            progressPercent := (totalMinutesCompleted / streamer.minutes) * 100
+            
             summary .= "  " . i . ". " . streamer.username . " - " . streamer.itemName
-            summary .= " (need " . remaining . " more min)`n"
+            summary .= " (" . Round(progressPercent, 1) . "% - need " . Round(remaining, 1) . " more min)`n"
         }
     }
     
@@ -265,6 +756,30 @@ PrintGeneralDropsSummary() {
     TrayTip("Twitch Drops", "General drops info saved to drops_status.txt", 3)
 }
 
+; Print completed drops from inventory
+PrintCompletedDropsSummary() {
+    global CompletedDrops
+    
+    if (CompletedDrops.Count == 0) {
+        summary := "COMPLETED DROPS (from Twitch inventory)`n" . RepeatString("=", 60) . "`n`n"
+        summary .= "No completed drops found in inventory.`n`n"
+        FileAppend(summary, A_ScriptDir "\\drops_status.txt")
+        return
+    }
+    
+    summary := "COMPLETED DROPS (from Twitch inventory)`n" . RepeatString("=", 60) . "`n`n"
+    
+    count := 1
+    for dropName in CompletedDrops {
+        summary .= count . ". " . dropName . " ✓ COMPLETED`n"
+        count++
+    }
+    summary .= "`nTotal completed drops: " . CompletedDrops.Count . "`n`n"
+    
+    FileAppend(summary, A_ScriptDir "\\drops_status.txt")
+    TrayTip("Twitch Drops", "Found " . CompletedDrops.Count . " completed drops in inventory", 5)
+}
+
 ; Streamer data structure: {username, url, minutes, dropType, itemName}
 StreamerDrops := []
 
@@ -273,6 +788,9 @@ GeneralDrops := []
 
 ; Progress tracking: {username, timeWatched, isComplete, lastChecked}
 StreamerProgress := Map()
+
+; Completed drops from Twitch inventory: {dropName: true}
+CompletedDrops := Map()
 
 ; Current viewing session info
 CurrentStreamer := ""
@@ -521,10 +1039,17 @@ Main() {
         return
     }
     
+    ; Check Twitch drops inventory to see what's already completed
+    if (DEBUG_MODE) {
+        Notify("Checking Twitch drops inventory for completed items...", 3, true)
+    }
+    CheckDropsInventory()
+    
     ; Show initial streamer list
     if (DEBUG_MODE) {
         PrintStreamerSummary("PARSED STREAMERS FROM FACEPUNCH REGISTRY", StreamerDrops)
         PrintGeneralDropsSummary()
+        PrintCompletedDropsSummary()
     }
     
     ; Initialize progress tracking for all streamers
@@ -768,8 +1293,44 @@ GetIncompleteStreamers() {
     
     for streamer in StreamerDrops {
         progress := StreamerProgress[streamer.username]
-        if (!progress.isComplete && progress.timeWatched < streamer.minutes) {
+        
+        ; Check if this streamer's drop is already completed in Twitch inventory
+        if (IsDropCompleted(streamer.dropType, streamer.itemName)) {
+            if (DEBUG_MODE) {
+                FileAppend("Skipping " . streamer.username . " - drop already completed in inventory: " . streamer.itemName . "`n", A_ScriptDir "\\drops_status.txt")
+            }
+            ; Mark as complete in our local tracking too
+            progress.isComplete := true
+            continue
+        }
+        
+        ; Check inventory progress
+        inventoryProgress := GetDropProgress(streamer.dropType, streamer.itemName, streamer.url)
+        if (inventoryProgress != false) {
+            ; Use inventory progress if available (convert to minutes)
+            inventoryMinutesCompleted := inventoryProgress * streamer.minutes
+            
+            ; Use the higher of local tracking or inventory progress
+            totalMinutesCompleted := Max(progress.timeWatched, inventoryMinutesCompleted)
+            
+            ; Update local progress if inventory shows more progress
+            if (inventoryMinutesCompleted > progress.timeWatched) {
+                progress.timeWatched := inventoryMinutesCompleted
+            }
+        } else {
+            ; Use local progress tracking only
+            totalMinutesCompleted := progress.timeWatched
+        }
+        
+        ; Check if still incomplete based on combined progress
+        if (!progress.isComplete && totalMinutesCompleted < streamer.minutes) {
             incompleteList.Push(streamer)
+        } else if (totalMinutesCompleted >= streamer.minutes && !progress.isComplete) {
+            ; Mark as complete if we've reached required time
+            progress.isComplete := true
+            if (DEBUG_MODE) {
+                FileAppend("Marking " . streamer.username . " as complete - reached " . Round(totalMinutesCompleted, 1) . "/" . streamer.minutes . " minutes`n", A_ScriptDir "\\drops_status.txt")
+            }
         }
     }
     
@@ -839,11 +1400,31 @@ WatchStreamerWithChecks(streamer) {
     
     ; Calculate how long to watch this session (max 60 minutes or remaining time)
     progress := StreamerProgress[streamer.username]
-    remainingTime := streamer.minutes - progress.timeWatched
+    
+    ; Check if we have progress from Twitch inventory
+    inventoryProgress := GetDropProgress(streamer.dropType, streamer.itemName, streamer.url)
+    if (inventoryProgress != false) {
+        ; Use inventory progress if available (convert to minutes)
+        inventoryMinutesCompleted := inventoryProgress * streamer.minutes
+        
+        ; Use the higher of local tracking or inventory progress
+        totalMinutesCompleted := Max(progress.timeWatched, inventoryMinutesCompleted)
+        
+        if (DEBUG_MODE) {
+            FileAppend("Inventory progress: " . Round(inventoryProgress * 100, 1) . "% (" . Round(inventoryMinutesCompleted, 1) . " min) vs Local: " . progress.timeWatched . " min`n", A_ScriptDir "\\drops_status.txt")
+        }
+    } else {
+        ; Use local progress tracking only
+        totalMinutesCompleted := progress.timeWatched
+    }
+    
+    remainingTime := streamer.minutes - totalMinutesCompleted
     sessionTime := Min(60, remainingTime) ; Max 60 minutes per session
     
     if (DEBUG_MODE) {
-        Notify("Starting " . sessionTime . " minute session for " . streamer.username, 5, true)
+        progressPercent := (totalMinutesCompleted / streamer.minutes) * 100
+        FileAppend("Progress for " . streamer.username . ": " . Round(progressPercent, 1) . "% (" . Round(totalMinutesCompleted, 1) . "/" . streamer.minutes . " min). Need " . Round(remainingTime, 1) . " more minutes.`n", A_ScriptDir "\\drops_status.txt")
+        Notify("Starting " . sessionTime . " minute session for " . streamer.username . " (" . Round(progressPercent, 1) . "% complete)", 5, true)
     }
     
     ; Watch with 10-minute live checks
