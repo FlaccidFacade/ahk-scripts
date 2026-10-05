@@ -1,0 +1,3 @@
+code .
+
+exit 1
